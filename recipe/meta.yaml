@@ -30,12 +30,9 @@ requirements:
 test:
   imports:
     - azure
-    - azure.keyvault
-    - azure.keyvault.http_bearer_challenge_cache
-    - azure.keyvault.v2016_10_01
-    - azure.keyvault.v2016_10_01.models
-    - azure.keyvault.v7_0
-    - azure.keyvault.v7_0.models
+    - azure.keyvault.certificates
+    - azure.keyvault.keys
+    - azure.keyvault.secrets
 
 about:
   home: https://github.com/Azure/azure-sdk-for-python
