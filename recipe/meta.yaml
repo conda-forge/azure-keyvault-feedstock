@@ -1,5 +1,5 @@
 {% set name = "azure-keyvault" %}
-{% set version = "1.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -19,33 +19,29 @@ requirements:
     - python
     - pip
   run:
-    - azure-common >=1.1,<2
-    - cryptography >=2.1.4
-    - msrest >=0.5.0
-    - msrestazure >=0.4.32,<2.0.0
-    - python
-    - requests >=2.18.4
+    - azure-keyvault-certificates ~=4.2.0
+    - azure-keyvault-keys ~=4.2.0
+    - azure-keyvault-secrets ~=4.2.0
 
 test:
   imports:
-    - azure
-    - azure.keyvault
-    - azure.keyvault.http_bearer_challenge_cache
-    - azure.keyvault.v2016_10_01
-    - azure.keyvault.v2016_10_01.models
-    - azure.keyvault.v7_0
-    - azure.keyvault.v7_0.models
+    - azure.keyvault.certificates
+    - azure.keyvault.keys
+    - azure.keyvault.secrets
 
 about:
-  home: https://github.com/Azure/azure-sdk-for-python
+  home: https://docs.microsoft.com/en-au/azure/key-vault/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
-  summary: Microsoft Azure Key Vault Client Library for Python
-
-  doc_url: https://docs.microsoft.com/en-us/python/api/overview/azure/key-vault
-  dev_url: https://github.com/Azure/azure-sdk-for-python
+  license_file: LICENSE.txt
+  summary: 'Azure Key Vault client libraries for Python'
+  description: |
+    This package does not contain any code in itself.
+    It installs a set of packages that provide APIs for Key Vault operations.
+  doc_url: https://docs.microsoft.com/en-au/azure/key-vault/
+  dev_url: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/keyvault/azure-keyvault
 
 extra:
   recipe-maintainers:
     - andreyz4k
+    - dhirschfeld
