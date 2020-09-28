@@ -5,14 +5,9 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 37a8e5f376eb5a304fcd066d414b5d93b987e68f9212b0c41efa37d429aadd49
-
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
