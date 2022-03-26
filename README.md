@@ -5,9 +5,13 @@ Home: https://docs.microsoft.com/en-au/azure/key-vault/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/azure-keyvault-feedstock/blob/main/LICENSE.txt)
 
 Summary: Azure Key Vault client libraries for Python
+
+Development: https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/keyvault/azure-keyvault
+
+Documentation: https://docs.microsoft.com/en-au/azure/key-vault/
 
 This package does not contain any code in itself.
 It installs a set of packages that provide APIs for Key Vault operations.
@@ -19,8 +23,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6250&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/azure-keyvault-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6250&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/azure-keyvault-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -40,6 +44,7 @@ Installing `azure-keyvault` from the `conda-forge` channel can be achieved by ad
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `azure-keyvault` can be installed with:
@@ -58,7 +63,8 @@ conda search azure-keyvault --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -110,9 +116,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
@@ -120,4 +126,5 @@ Feedstock Maintainers
 
 * [@andreyz4k](https://github.com/andreyz4k/)
 * [@dhirschfeld](https://github.com/dhirschfeld/)
+* [@xylar](https://github.com/xylar/)
 
