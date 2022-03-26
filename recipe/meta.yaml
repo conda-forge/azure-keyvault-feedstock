@@ -7,13 +7,14 @@ package:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
+    - python >=3.5
     - azure-keyvault-certificates ~=4.2.0
     - azure-keyvault-keys ~=4.2.0
     - azure-keyvault-secrets ~=4.2.0
@@ -40,3 +41,4 @@ extra:
   recipe-maintainers:
     - andreyz4k
     - dhirschfeld
+    - xylar
