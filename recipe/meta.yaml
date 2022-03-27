@@ -11,9 +11,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
+    - python >=3.6
     - azure-keyvault-certificates ~=4.0
     - azure-keyvault-keys ~=4.0
     - azure-keyvault-secrets ~=4.0
