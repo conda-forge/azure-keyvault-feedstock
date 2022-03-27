@@ -1,5 +1,5 @@
 {% set name = "azure-keyvault" %}
-{% set version = "4.2.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +11,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - azure-keyvault-certificates ~=4.2.0
-    - azure-keyvault-keys ~=4.2.0
-    - azure-keyvault-secrets ~=4.2.0
+    - python >=3.6
+    - azure-keyvault-certificates ~=4.0
+    - azure-keyvault-keys ~=4.0
+    - azure-keyvault-secrets ~=4.0
 
 test:
   imports:
