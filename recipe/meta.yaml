@@ -7,18 +7,20 @@ package:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - azure-keyvault-certificates ~=4.3
     - azure-keyvault-keys ~=4.3
     - azure-keyvault-secrets ~=4.3
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - azure.keyvault.certificates
     - azure.keyvault.keys
